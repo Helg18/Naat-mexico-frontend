@@ -73,6 +73,18 @@
 .icon-enviar:before {
   content: "\e922";
 }
+.icon-badge1:before {
+  content: "\e908";
+}
+.icon-badge2:before {
+  content: "\e909";
+}
+.icon-badge3:before {
+  content: "\e90a";
+}
+.icon-badge4:before {
+  content: "\e90b";
+}
 .icon-foto:before {
   content: "\e923";
 }
@@ -88,7 +100,10 @@
 .icon-right:before {
   content: "\e905";
 }
-.icon-edit:before {
+.icon-buscar:before {
+  content: "\e90c";
+}
+.icon-editar:before {
   content: "\e907";
 }
 .icon-decalogo:before {
@@ -148,7 +163,6 @@ button {
   font-size: 14px;
 }
 h2 {
-  margin: 0;
   text-align: center;
 }
 h2 i,
@@ -207,23 +221,29 @@ header a {
   background-size: cover;
 }
 .foto {
+  background-image: url('../img/heisenberg.jpg');
+  background-size: cover;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   border-radius: 100%;
-  height: 50px;
   position: relative;
-  width: 50px;
+  width: 42px;
+}
+.foto:after {
+  content: '';
+  display: block;
+  padding-top: 100%;
 }
 .foto .vista-previa {
   background-color: #e8d9ce;
   background-image: url('../img/cara.png');
   background-size: cover;
-  height: 124px;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   border-radius: 100%;
-  margin: 8px;
-  width: 124px;
+  height: 100%;
+  position: absolute;
+  width: 100%;
 }
 .foto input {
   height: 100%;
@@ -237,6 +257,43 @@ header a {
   position: absolute;
   top: 0;
   width: 100%;
+}
+.jq-ry-container {
+  position: relative;
+  padding: 0 5px;
+  line-height: 0;
+  display: block;
+  cursor: pointer;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.jq-ry-container[readonly="readonly"] {
+  cursor: default;
+}
+.jq-ry-container > .jq-ry-group-wrapper {
+  position: relative;
+  width: 100%;
+}
+.jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group {
+  position: relative;
+  line-height: 0;
+  z-index: 10;
+  white-space: nowrap;
+}
+.jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group > svg {
+  display: inline-block;
+}
+.jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group.jq-ry-normal-group {
+  width: 100%;
+}
+.jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group.jq-ry-rated-group {
+  width: 0;
+  z-index: 11;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
 }
 main section {
   padding: 30px 0;
@@ -752,12 +809,203 @@ main article header ul li small {
 main article header.top {
   background-color: #ed1941;
   color: #f7f1ed;
+  padding: 8px 0;
+}
+main article header.top .foto {
+  margin: 0 6px 0 16px;
+}
+main article header.titulo {
+  margin: 16px;
+  margin-left: 0;
+  overflow: hidden;
+  padding-left: 64px;
+}
+main article header.titulo .numero {
+  display: block;
+  color: #ed1941;
+  font-size: 24px;
+  line-height: 32px;
+  left: 0;
+  letter-spacing: -2px;
+  position: absolute;
+  text-align: right;
+  width: 52px;
 }
 main article header.titulo .categoria {
+  float: left;
   color: #ed1941;
 }
 main article header.titulo .categoria i {
   font-size: 32px;
+}
+main article header.titulo .calificacion {
+  float: right;
+}
+main article header.titulo .calificacion small,
+main article header.titulo .calificacion big {
+  display: inline-block;
+  line-height: 100%;
+  vertical-align: baseline;
+}
+main article .content {
+  margin: 16px 16px 16px 64px;
+}
+main article .content h3 {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+main article a {
+  background-color: #e1d2c6;
+  display: block;
+  padding: 8px 0;
+  text-align: center;
+}
+main article a i,
+main article a span {
+  display: block;
+}
+main article a i {
+  font-size: 20px;
+}
+main .perfil {
+  background-color: #fafafa;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.33);
+  max-width: 960px;
+  position: relative;
+  /*.foto{
+      position: relative;
+      width: 146px;
+      .vista-previa{
+        height: 100%;
+        margin: 0;
+        width: 100%;
+      }
+      &:after{
+        content: '';
+        display: block;
+        padding-top: 100%;
+      }
+    }*/
+
+}
+main .perfil .foto {
+  float: left;
+  height: 150px;
+  margin: 16px 32px;
+  width: 150px;
+}
+main .perfil .info {
+  left: 214px;
+  position: absolute;
+  right: 120px;
+}
+main .perfil .info h3 {
+  color: #ed1941;
+  margin: 16px 0 0;
+}
+main .perfil .info h3 big,
+main .perfil .info h3 small {
+  display: inline-block;
+  text-transform: uppercase;
+  vertical-align: baseline;
+}
+main .perfil .info h3 small {
+  font-size: 16px;
+}
+main .perfil .info h3 big {
+  font-size: 24px;
+}
+main .perfil .info h4 {
+  font-weight: normal;
+  margin: 0 0 16px;
+  text-transform: uppercase;
+}
+main .perfil .info ul {
+  font-size: 0;
+}
+main .perfil .info ul li {
+  display: inline-block;
+  vertical-align: top;
+}
+main .perfil .info ul li label,
+main .perfil .info ul li span,
+main .perfil .info ul li input {
+  display: block;
+}
+main .perfil .info ul li label {
+  font-weight: bold;
+}
+main .perfil .info ul.badges li {
+  margin-right: 16px;
+  text-align: center;
+}
+main .perfil .info ul.badges li i {
+  background-color: #e1d2c6;
+  border: 1px solid #373734;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  font-size: 20px;
+  width: 30px;
+}
+main .perfil .info ul.badges li small {
+  font-size: 8px;
+}
+main .perfil .info ul.datos {
+  font-size: 0;
+  text-align: justify;
+}
+main .perfil .info ul.datos li {
+  font-size: 12px;
+  width: 20%;
+}
+main .perfil .info ul.datos li:first-child {
+  width: 40%;
+}
+main .perfil .decalogo {
+  background-color: #ede4dd;
+  float: right;
+  height: 182px;
+  position: relative;
+  width: 120px;
+}
+main .perfil .decalogo a {
+  display: block;
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  top: 50%;
+}
+main .perfil .decalogo a i {
+  font-size: 60px;
+}
+main .perfil .decalogo a span {
+  display: block;
+  font-weight: bold;
+}
+main .perfil nav {
+  clear: both;
+  font-size: 0;
+  padding: 0;
+}
+main .perfil nav a {
+  background-color: #e8d9ce;
+  display: inline-block;
+  color: #ed1941;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 30px;
+  vertical-align: top;
+  width: 50%;
 }
 ::-webkit-input-placeholder {
   color: #373734;
@@ -777,7 +1025,6 @@ main article header.titulo .categoria i {
     min-height: 100%;
   }
   body {
-    font-size: 12px;
     margin: 0 0 60px;
   }
   header.site {
@@ -912,7 +1159,7 @@ main article header.titulo .categoria i {
   }
   main nav .inner a:nth-child(2):before,
   main nav .inner a:nth-child(2):after {
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0.2);
     content: '';
     display: block;
     position: absolute;
@@ -929,6 +1176,26 @@ main article header.titulo .categoria i {
   }
   main nav .inner a:nth-child(2):after {
     right: 0;
+  }
+  main nav.top .inner a,
+  main nav.bottom .inner a {
+    padding: 0 12%;
+  }
+  main nav.top .inner a:first-child,
+  main nav.bottom .inner a:first-child {
+    padding-left: 0;
+  }
+  main nav.top .inner a:last-child,
+  main nav.bottom .inner a:last-child {
+    padding-right: 0;
+  }
+  main nav.top a:nth-child(2):before,
+  main nav.top a:nth-child(2):after {
+    height: 30px;
+  }
+  main nav.bottom a:nth-child(2):before,
+  main nav.bottom a:nth-child(2):after {
+    height: 20px;
   }
   main nav.main {
     background-color: #e8d9ce;
@@ -1038,28 +1305,55 @@ main article header.titulo .categoria i {
     height: 5px;
     width: 5px;
   }
-  main nav.top .inner a,
-  main nav.bottom .inner a {
-    padding: 0 8%;
-  }
-  main nav.top .inner a:first-child,
-  main nav.bottom .inner a:first-child {
-    padding-left: 0;
-  }
-  main nav.top .inner a:last-child,
-  main nav.bottom .inner a:last-child {
-    padding-right: 0;
-  }
-  main nav.top a:nth-child(2):before,
-  main nav.top a:nth-child(2):after {
-    height: 30px;
-  }
-  main nav.bottom a:nth-child(2):before,
-  main nav.bottom a:nth-child(2):after {
-    height: 20px;
-  }
   main form fieldset ul.columnas li {
     width: 50%;
+  }
+  main .perfil {
+    /*background-color: @blanco;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.33);
+        max-width: 960px;
+        position: relative;*/
+  
+  }
+  main .perfil .foto {
+    /*float: left;
+          height: 150px;
+          margin: 16px 32px;
+          width: 150px;*/
+  
+  }
+  main .perfil .info {
+    padding-bottom: 42px;
+    /*
+          left: 214px;
+          position: absolute;
+          right: 120px;
+          h3{
+            color: @rojo;
+            margin: 16px 0 0;
+            big,small{
+              display: inline-block;
+              text-transform: uppercase;
+              vertical-align: baseline;
+            }
+            small{
+              font-size: 16px;
+            }
+            big{
+              font-size: 24px;
+            }
+          }
+          h4{
+            font-weight: normal;
+            margin: 0 0 16px;
+            text-transform: uppercase;
+          }*/
+  
+  }
+  main .perfil .info ul.badges {
+    bottom: 0;
+    left: 0;
+    position: absolute;
   }
   footer {
     background-color: #000000;

@@ -27,7 +27,9 @@ $(function(){
   });
 
 	//hace que los textarea crezcan con forme a su contenido
-	autosize($('.lista textarea'));
+	if ( $('.registro-iniciativa').length ){
+		autosize($('.lista textarea'));
+	}
 
 	//crea un nuevo paso y le palicala función anterior
 	$('.agregar').on('click',function(){
@@ -48,5 +50,23 @@ $(function(){
 			$(this).parent('.campo').toggleClass('checked');
 		}
 	});
+
+	//colorea las estrellas con la calificación
+	/*$('.rating').rateYo({
+		starWidth: '12px',
+		spacing: '4px',
+		ratedFill: '#ED1941',
+    rating: $(this).attr('data-rating')
+  });*/
+
+	$('.rating').each(function(){
+		var item = $(this);
+		item.rateYo({
+			starWidth: '12px',
+		spacing: '4px',
+		ratedFill: '#ED1941',
+         rating: item.data('rating')
+     });
+});
 
 });
