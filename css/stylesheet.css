@@ -780,10 +780,14 @@ main form.tips button {
   color: #373734;
 }
 main article {
-  background-color: #f7f1ed;
   max-width: 720px;
-  margin: 30px auto 0;
+  margin-left: auto;
+  margin-right: auto;
   width: 70%;
+}
+main article.main {
+  background-color: #f7f1ed;
+  margin-top: 30px;
 }
 main article header {
   position: relative;
