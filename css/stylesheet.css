@@ -493,6 +493,7 @@ main form.registro-usuario fieldset .foto {
   height: 140px;
   position: absolute;
   left: 0;
+  width: 140px;
 }
 main form.login fieldset .campo,
 main form.registro-usuario fieldset .campo {
