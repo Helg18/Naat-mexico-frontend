@@ -164,6 +164,7 @@ button {
 }
 h2 {
   text-align: center;
+  margin: 0 0 16px;
 }
 h2 i,
 h2 span {
@@ -380,108 +381,6 @@ main section.metas .inner div span small {
   display: block;
   line-height: 100%;
 }
-main form fieldset ul {
-  font-size: 0;
-}
-main form fieldset ul li {
-  -ms-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  display: inline-block;
-  padding: 0 21px;
-  vertical-align: top;
-}
-main form fieldset ul.columns li {
-  width: 50%;
-}
-main form fieldset .campo {
-  border-color: #373734;
-  border-style: solid;
-  border-width: 1px;
-  position: relative;
-}
-main form fieldset .campo label,
-main form fieldset .campo input,
-main form fieldset .campo select,
-main form fieldset .campo textarea {
-  display: block;
-}
-main form fieldset .campo label {
-  color: #e8d9ce;
-  font-size: 12px;
-  line-height: 32px;
-  height: 32px;
-  padding: 0 16px;
-  top: 0;
-  text-transform: uppercase;
-}
-main form fieldset .campo input[type=text],
-main form fieldset .campo select,
-main form fieldset .campo textarea {
-  -ms-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  background-color: transparent;
-  color: #fafafa;
-  bottom: 0;
-  display: block;
-  font-size: 12px;
-  height: 32px;
-  outline: 0;
-  padding: 0 16px;
-  text-transform: uppercase;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-  vertical-align: middle;
-  width: 100%;
-}
-main form fieldset .campo i {
-  border-color: inherit;
-  border-style: inherit;
-  border-width: inherit;
-  display: block;
-  height: 5px;
-  position: absolute;
-  width: 5px;
-}
-main form fieldset .campo i.tl,
-main form fieldset .campo i.tr {
-  bottom: 100%;
-}
-main form fieldset .campo i.bl,
-main form fieldset .campo i.br {
-  top: 100%;
-}
-main form fieldset .campo i.tl,
-main form fieldset .campo i.bl {
-  right: 100%;
-}
-main form fieldset .campo i.tr,
-main form fieldset .campo i.br {
-  left: 100%;
-}
-main form button {
-  background-color: transparent;
-  color: #e8d9ce;
-  cursor: pointer;
-  display: block;
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  margin: 40px auto 0;
-}
-main form button i {
-  display: block;
-  font-size: 30px;
-  margin-top: 10px;
-}
 main form.login fieldset,
 main form.registro-usuario fieldset {
   position: relative;
@@ -687,25 +586,31 @@ main form.tips fieldset.categoria label b {
   width: 110px;
 }
 main form.registro-iniciativa fieldset.indicadores,
-main form.tips fieldset.indicadores {
+main form.tips fieldset.indicadores,
+main form.registro-iniciativa fieldset.evidencia,
+main form.tips fieldset.evidencia {
   font-size: 0;
   width: 90%;
 }
 main form.registro-iniciativa fieldset.indicadores label,
-main form.tips fieldset.indicadores label {
+main form.tips fieldset.indicadores label,
+main form.registro-iniciativa fieldset.evidencia label,
+main form.tips fieldset.evidencia label {
   cursor: pointer;
   display: inline-block;
   vertical-align: top;
-  margin: 0;
+  margin: 24px 0 0;
   position: relative;
-  height: 100px;
+  height: 56px;
   width: 33.33%;
 }
 main form.registro-iniciativa fieldset.indicadores label .campo,
-main form.tips fieldset.indicadores label .campo {
+main form.tips fieldset.indicadores label .campo,
+main form.registro-iniciativa fieldset.evidencia label .campo,
+main form.tips fieldset.evidencia label .campo {
+  display: inline-block;
   height: 26px;
-  position: absolute;
-  top: 33px;
+  margin: 14px;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
@@ -714,7 +619,9 @@ main form.tips fieldset.indicadores label .campo {
   width: 26px;
 }
 main form.registro-iniciativa fieldset.indicadores label .campo:before,
-main form.tips fieldset.indicadores label .campo:before {
+main form.tips fieldset.indicadores label .campo:before,
+main form.registro-iniciativa fieldset.evidencia label .campo:before,
+main form.tips fieldset.evidencia label .campo:before {
   background-color: #ed1941;
   content: '';
   display: block;
@@ -740,7 +647,9 @@ main form.tips fieldset.indicadores label .campo:before {
   width: 18px;
 }
 main form.registro-iniciativa fieldset.indicadores label .campo input,
-main form.tips fieldset.indicadores label .campo input {
+main form.tips fieldset.indicadores label .campo input,
+main form.registro-iniciativa fieldset.evidencia label .campo input,
+main form.tips fieldset.evidencia label .campo input {
   -moz-opacity: 0;
   -khtml-opacity: 0;
   -webkit-opacity: 0;
@@ -749,7 +658,9 @@ main form.tips fieldset.indicadores label .campo input {
   filter: alpha(opacity=0);
 }
 main form.registro-iniciativa fieldset.indicadores label .campo.checked:before,
-main form.tips fieldset.indicadores label .campo.checked:before {
+main form.tips fieldset.indicadores label .campo.checked:before,
+main form.registro-iniciativa fieldset.evidencia label .campo.checked:before,
+main form.tips fieldset.evidencia label .campo.checked:before {
   -moz-opacity: 1;
   -khtml-opacity: 1;
   -webkit-opacity: 1;
@@ -758,14 +669,36 @@ main form.tips fieldset.indicadores label .campo.checked:before {
   filter: alpha(opacity=100);
 }
 main form.registro-iniciativa fieldset.indicadores label span,
-main form.tips fieldset.indicadores label span {
+main form.tips fieldset.indicadores label span,
+main form.registro-iniciativa fieldset.evidencia label span,
+main form.tips fieldset.evidencia label span {
   display: inline-block;
   font-size: 12px;
   position: absolute;
-  left: 60px;
+  left: 70px;
   transform: translateY(-50%);
   right: 16px;
   top: 50%;
+}
+main form.registro-iniciativa fieldset.evidencia,
+main form.tips fieldset.evidencia {
+  margin-top: 24px;
+}
+main form.registro-iniciativa fieldset.evidencia label,
+main form.tips fieldset.evidencia label {
+  margin: 0;
+  min-width: 160px;
+  width: auto;
+}
+main form.registro-iniciativa fieldset.evidencia .campo,
+main form.tips fieldset.evidencia .campo {
+  min-height: 32px;
+  margin-left: 160px;
+}
+main form.registro-iniciativa fieldset.evidencia .campo textarea,
+main form.tips fieldset.evidencia .campo textarea {
+  height: 116px;
+  resize: none;
 }
 main form.registro-iniciativa a,
 main form.tips a {
@@ -778,6 +711,108 @@ main form.tips a {
 }
 main form.tips button {
   color: #373734;
+}
+main fieldset ul {
+  font-size: 0;
+}
+main fieldset ul li {
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 0 21px;
+  vertical-align: top;
+}
+main fieldset ul.columns li {
+  width: 50%;
+}
+main fieldset .campo {
+  border-color: #373734;
+  border-style: solid;
+  border-width: 1px;
+  position: relative;
+}
+main fieldset .campo label,
+main fieldset .campo input,
+main fieldset .campo select,
+main fieldset .campo textarea {
+  display: block;
+}
+main fieldset .campo label {
+  color: #e8d9ce;
+  font-size: 12px;
+  line-height: 32px;
+  height: 32px;
+  padding: 0 16px;
+  top: 0;
+  text-transform: uppercase;
+}
+main fieldset .campo input[type=text],
+main fieldset .campo select,
+main fieldset .campo textarea {
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  color: #fafafa;
+  bottom: 0;
+  display: block;
+  font-size: 12px;
+  height: 32px;
+  outline: 0;
+  padding: 0 16px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  vertical-align: middle;
+  width: 100%;
+}
+main fieldset .campo i {
+  border-color: inherit;
+  border-style: inherit;
+  border-width: inherit;
+  display: block;
+  height: 5px;
+  position: absolute;
+  width: 5px;
+}
+main fieldset .campo i.tl,
+main fieldset .campo i.tr {
+  bottom: 100%;
+}
+main fieldset .campo i.bl,
+main fieldset .campo i.br {
+  top: 100%;
+}
+main fieldset .campo i.tl,
+main fieldset .campo i.bl {
+  right: 100%;
+}
+main fieldset .campo i.tr,
+main fieldset .campo i.br {
+  left: 100%;
+}
+main button {
+  background-color: transparent;
+  color: #e8d9ce;
+  cursor: pointer;
+  display: block;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  margin: 40px auto 0;
+}
+main button i {
+  display: block;
+  font-size: 30px;
+  margin-top: 10px;
 }
 main article {
   max-width: 720px;
@@ -853,7 +888,7 @@ main article header.titulo .calificacion big {
   vertical-align: baseline;
 }
 main article .content {
-  margin: 16px 16px 16px 64px;
+  margin: 16px 64px;
 }
 main article .content h3 {
   font-weight: normal;
@@ -871,6 +906,109 @@ main article a span {
 }
 main article a i {
   font-size: 20px;
+}
+main article .calificar {
+  background-color: #ed1941;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #fafafa;
+  font-size: 0;
+  height: 50px;
+  overflow: hidden;
+  padding: 0 64px;
+  text-align: justify;
+}
+main article .calificar:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+main article .calificar h3 {
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: middle;
+}
+main article .calificar label {
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  padding-left: 10px;
+  position: relative;
+  height: 50px;
+  width: 120px;
+}
+main article .calificar label .campo {
+  border-color: #fafafa;
+  display: inline-block;
+  height: 12px;
+  margin: 18px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 12px;
+}
+main article .calificar label .campo i {
+  height: 3px;
+  width: 3px;
+}
+main article .calificar label .campo:before {
+  background-color: #fafafa;
+  content: '';
+  display: block;
+  height: 8px;
+  left: 50%;
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  -webkit-opacity: 0;
+  opacity: 0;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+  filter: alpha(opacity=0);
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  top: 50%;
+  width: 8px;
+}
+main article .calificar label .campo input {
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  -webkit-opacity: 0;
+  opacity: 0;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+  filter: alpha(opacity=0);
+}
+main article .calificar label .campo.checked:before {
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  -webkit-opacity: 1;
+  opacity: 1;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+  filter: alpha(opacity=100);
+}
+main article .calificar label span {
+  display: inline-block;
+  float: left;
+  font-size: 16px;
+  line-height: 50px;
+  vertical-align: top;
+}
+main article .calificar .rate {
+  display: inline-block;
+  margin: 14px 0;
+  height: 20px;
+  vertical-align: top;
 }
 main .perfil {
   background-color: #fafafa;
@@ -1011,6 +1149,16 @@ main .perfil nav a {
   line-height: 30px;
   vertical-align: top;
   width: 50%;
+}
+main .scroll-content {
+  overflow: auto;
+}
+main .scroll-content .inner {
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-right: 30px;
 }
 ::-webkit-input-placeholder {
   color: #373734;
@@ -1162,8 +1310,18 @@ main .perfil nav a {
   main nav .inner a span {
     font-weight: bold;
   }
-  main nav .inner a:nth-child(2):before,
-  main nav .inner a:nth-child(2):after {
+  main nav.top .inner.tres-items a,
+  main nav.bottom .inner.tres-items a {
+    padding: 0 12%;
+  }
+  main nav.top .inner.tres-items a:first-child,
+  main nav.bottom .inner.tres-items a:first-child {
+    padding-left: 0;
+  }
+  main nav.top .inner.tres-items a:nth-child(2):before,
+  main nav.bottom .inner.tres-items a:nth-child(2):before,
+  main nav.top .inner.tres-items a:nth-child(2):after,
+  main nav.bottom .inner.tres-items a:nth-child(2):after {
     background-color: rgba(0, 0, 0, 0.2);
     content: '';
     display: block;
@@ -1176,31 +1334,64 @@ main .perfil nav a {
     transform: translateY(-50%);
     width: 1px;
   }
-  main nav .inner a:nth-child(2):before {
+  main nav.top .inner.tres-items a:nth-child(2):before,
+  main nav.bottom .inner.tres-items a:nth-child(2):before {
     left: 0;
   }
-  main nav .inner a:nth-child(2):after {
+  main nav.top .inner.tres-items a:nth-child(2):after,
+  main nav.bottom .inner.tres-items a:nth-child(2):after {
     right: 0;
   }
-  main nav.top .inner a,
-  main nav.bottom .inner a {
-    padding: 0 12%;
-  }
-  main nav.top .inner a:first-child,
-  main nav.bottom .inner a:first-child {
-    padding-left: 0;
-  }
-  main nav.top .inner a:last-child,
-  main nav.bottom .inner a:last-child {
+  main nav.top .inner.tres-items a:last-child,
+  main nav.bottom .inner.tres-items a:last-child {
     padding-right: 0;
   }
   main nav.top a:nth-child(2):before,
   main nav.top a:nth-child(2):after {
     height: 30px;
   }
-  main nav.bottom a:nth-child(2):before,
-  main nav.bottom a:nth-child(2):after {
+  main nav.bottom .inner.tres-items a:nth-child(2):before,
+  main nav.bottom .inner.tres-items a:nth-child(2):after {
     height: 20px;
+  }
+  main nav.rojo a {
+    color: #f7f1ed;
+  }
+  main nav.rojo a:before,
+  main nav.rojo a:after {
+    background-color: rgba(247, 241, 237, 0.2);
+  }
+  main nav.small {
+    padding: 8px 0;
+  }
+  main nav.small a {
+    padding: 0 10px;
+  }
+  main nav.small a:after {
+    background-color: rgba(0, 0, 0, 0.2);
+    content: '';
+    display: block;
+    height: 12px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 1px;
+  }
+  main nav.small a:after {
+    right: 0;
+  }
+  main nav.small a:first-child {
+    padding-left: 0;
+  }
+  main nav.small a:last-child {
+    padding-right: 0;
+  }
+  main nav.small a:last-child:after {
+    content: none;
   }
   main nav.main {
     background-color: #e8d9ce;

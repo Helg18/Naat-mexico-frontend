@@ -2,11 +2,12 @@
 <html lang="es">
 <head>
 <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NA'AT</title>
 <link href="css/stylesheet.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Maven+Pro:500,900" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-<script src="js/autosize.min.js"></script>
+<script src="js/jquery.rateyo.min.js"></script>
 <script src="js/naat.js"></script>
 </head>
 <body class="figurac">
@@ -46,27 +47,23 @@
 		</div>
 	</header>
 	<main>
-		<section class="metas">
-			<div class="inner">
-				<div>
-					<big><b>METAS</b></big>
-				</div>
-				<div>
-					<span>
-						<big><b>35%</b></big>
-						<b>NI</b>
-						<small>(NETO INGRESO)</small>
-					</span>
-				</div>
-				<div>
-					<span>
-						<big><b>35%</b></big>
-						<b>PNO</b>
-						<small>(PORCENTAJE NETO OBJETIVO)</small>
-					</span>
-				</div>
+		<nav class="bottom rojo">
+			<div class="inner tres-items">
+				<a href="">DESTREZA</a>
+				<a href="">USO DE HERRAMIENTAS</a>
+				<a href="">DESARROLLO DE TALENTO</a>
 			</div>
-		</section>
+		</nav>
+		<nav class="small cremao">
+			<div class="inner">
+				<a href="#">TODO</a>
+				<a href="#">TÉCNICAS DE VENTAS</a>
+				<a href="#">OFERTA ACADEMICA</a>
+				<a href="#">GENERACIÓN DE BASE DE DATOS</a>
+				<a href="#">GESTIÓN DE BASE DE DATOS</a>
+				<a href="#">MANEJO DEL TIEMPO</a>
+			</div>
+		</nav>
 		<section>
 			<h2>
 				<i class="icon-bleft"></i>
@@ -105,13 +102,16 @@
 					<span>LEER</span>
 					<i class="icon-bbottom"></i>
 				</a>
-				<div class="calificar">
-					<big>CALIFICAR</big>
-					<label for="funciona">
-						<input>
+				<fieldset class="calificar">
+					<h3>CALIFICAR</h3>
+					<label>
+						<span>Funciona</span>
+						<div class="campo">
+							<input type="checkbox" name="indicadores" id="tasa-cierre" value="tasa-cierre">
+						</div>
 					</label>
-				</div>
-			</article>
+					<div class="rate"></div>
+				</fieldset>
 		</section>
 	</main>
 	<footer>

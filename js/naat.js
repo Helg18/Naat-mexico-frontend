@@ -43,7 +43,7 @@ $(function(){
 	});
 
 	//limita a 3 el número de indicadores 
-	$('.indicadores input').on('click', function (evt) {
+	$('.indicadores input, .calificar input').on('click', function (evt) {
 		if ($('.indicadores input:checked').length > 3) {
 			this.checked = false;
 		} else {
@@ -51,22 +51,35 @@ $(function(){
 		}
 	});
 
-	//colorea las estrellas con la calificación
-	/*$('.rating').rateYo({
-		starWidth: '12px',
-		spacing: '4px',
-		ratedFill: '#ED1941',
-    rating: $(this).attr('data-rating')
-  });*/
+	//le asigna el tamaño al área para scrollear
+	if ( $('.scroll-content').length ){
+		var total = $(window).height(),
+		top = $('.scroll-content').offset().top,
+		outer = top + 92,
+		inner = total-outer;
+		$('.scroll-content').height(inner);
+	}
 
+
+	//colorea las estrellas con la calificación
 	$('.rating').each(function(){
 		var item = $(this);
 		item.rateYo({
 			starWidth: '12px',
-		spacing: '4px',
-		ratedFill: '#ED1941',
-         rating: item.data('rating')
-     });
-});
+			spacing: '4px',
+			ratedFill: '#ED1941',
+			rating: item.data('rating')
+		});
+	});
+
+	$('.rate').each(function(){
+		var item = $(this);
+		item.rateYo({
+			starWidth: '20px',
+			spacing: '4px',
+			normalFill: "rgba(250,250,250,0.5)",
+			ratedFill: '#fafafa'
+		});
+	});
 
 });
