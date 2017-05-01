@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NA'AT</title>
+<link href="css/stylesheet.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Maven+Pro:500,900" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+<script src="js/autosize.min.js"></script>
+<script src="js/naat.js"></script>
+</head>
+<body class="figurao">
+	<header class="site">
+		<div class="inner">
+			<a href="" class="logo">
+				<img src="img/logo-naat.png">
+			</a>
+			<a href="home.html" class="back"><i class="icon-left"></i></a>
+			<nav>
+				<a href="home.html">
+					<i class="icon-bleft"></i>
+					<span>HOME</span>
+					<i class="icon-bright"></i>
+				</a>
+				<a href="tips.html">
+					<i class="icon-bleft"></i>
+					<span>TIPS</span>
+					<i class="icon-bright"></i>
+				</a>
+				<a href="registro-iniciativa.html" class="active">
+					<i class="icon-bleft"></i>
+					<span>REGISTRAR<br>INICIATIVA</span>
+					<i class="icon-bright"></i>
+				</a>
+				<a href="iniciativas.html">
+					<i class="icon-bleft"></i>
+					<span>INICIATIVAS</span>
+					<i class="icon-bright"></i>
+				</a>
+				<a href="top-ten.html">
+					<i class="icon-bleft"></i>
+					<span>TOP TEN</span>
+					<i class="icon-bright"></i>
+				</a>
+			</nav>
+			<a href="perfil.html" class="profile"><i class="icon-login"></i>PERFIL</a>
+		</div>
+	</header>
+	<main>
+		<section>
+			<h2>
+				<i class="icon-bleft"></i>
+				<span>REGISTRO<br>INICIATIVA</span>
+				<i class="icon-bright"></i>
+			</h2>
+			<form class="registro-iniciativa inner">
+				<h4>TEMA</h4>
+				<fieldset>
+					<div class="campo placeholder">
+						<input type="text" placeholder="TÍTULO">
+					</div>
+				</fieldset>
+				<h4>CATEGORÍA</h4>
+				<fieldset class="categoria">
+					<label>
+						<input type="radio" name="categoria" value="destreza">
+						<i class="icon-destreza"></i>
+						<b>DESTREZA</b>
+					</label>
+					<label>
+						<input type="radio" name="categoria" value="herramientas">
+						<i class="icon-herramientas"></i>
+						<b>USO DE<br>HERRAMIENTAS</b>
+					</label>
+					<label>
+						<input type="radio" name="categoria" value="talento">
+						<i class="icon-talento"></i>
+						<b>DESARROLLO<br>DE TALENTO</b>
+					</label>
+				</fieldset>
+				<h4>SUB CATEGORÍA</h4>
+				<fieldset>
+					<div class="campo">
+						<select>
+							<option>TÉCNICA DE VENTAS</option>
+							<option>TÉCNICA DE VENTAS</option>
+							<option>TÉCNICA DE VENTAS</option>
+						</select>
+					</div>
+				</fieldset>
+				<fieldset>
+					<label><b>Por qué se te ocurrió</b> <small>(Max. 580 car.)</small></label>
+					<div class="campo textarea">
+						<textarea></textarea>
+					</div>
+				</fieldset>
+				<fieldset>
+					<label><b>Describe tu propuesta</b> <small>(Define los pasos)</small></label>
+					<div class="campo lista">
+						<ol>
+							<li><textarea data-autoresize></textarea></li>
+						</ol>
+					</div>
+				</fieldset>
+				<a class="agregar"><b>AGREGAR NUEVO PASO</b></a>
+				<h4>INDICADOR AL QUE IMPACTA</h4>
+				<h5>SELECCIONA 3 INDICADORES DONDE IMPACTA TU INICIATIVA</h5>
+				<fieldset class="indicadores">
+					<label>
+						<div class="campo">
+							<input type="checkbox" name="indicadores" id="tasa-cierre" value="tasa-cierre">
+						</div>
+						<span>Tasa de Conversión Cierre</span>
+					</label>
+					<label>
+						<div class="campo">
+							<input type="checkbox" name="indicadores" id="tasa-contactacion" value="tasa-contactacion">
+						</div>
+						<span>Tasa de Conversión Contactación</span>
+					</label>
+					<label>
+						<div class="campo">
+							<input type="checkbox" name="indicadores" id="tasa-asistencia" value="tasa-asistencia">
+						</div>
+						<span>Tasa de Conversión Asistencia</span>
+					</label>
+					<label>
+						<div class="campo">
+							<input type="checkbox" name="indicadores" id="clima-laboral" value="clima-laboral">
+						</div>
+						<span>Clima laboral</span>
+					</label>
+					<label>
+						<div class="campo">
+							<input type="checkbox" name="indicadores" id="comunicacion" value="comunicacion">
+						</div>
+						<span>Comunicación</span>
+					</label>
+					<label>
+						<div class="campo">
+							<input type="checkbox" name="indicadores" id="eficiencia" value="eficiencia">
+						</div>
+						<span>Eficiencia</span>
+					</label>
+					<label>
+						<div class="campo">
+							<input type="checkbox" name="indicadores" id="nuevo-ingreso" value="nuevo-ingreso">
+						</div>
+						<span>¡Nuevo ingreso</span>
+					</label>
+					<label>
+						<div class="campo">
+							<input type="checkbox" name="indicadores" id="precio" value="precio">
+						</div>
+						<span>Precio</span>
+					</label>
+					<label>
+						<div class="campo">
+							<input type="checkbox" name="indicadores" id="retencion-personal" value="retencion-personal">
+						</div>
+						<span>Retención de Personal</span>
+					</label>
+					<label>
+						<div class="campo">
+							<input type="checkbox" name="indicadores" id="renevue" value="renevue">
+						</div>
+						<span>Revenue</span>
+					</label>
+				</fieldset>
+				<h4>EVIDENCIA</h4>
+				<h5>PARA MEJORAR TU INICIATIVA, PUEDES ADJUNTAR ALGÚN VIDEO, ARCHIVO PDF O WORD</h5>
+				<fieldset class="evidencia">
+					<label>
+						<div class="campo">
+						</div>
+						<span>VIDEO</span>
+					</label>
+					<div class="campo">
+						<input type="text" name="video">
+					</div>
+				</fieldset>
+				<fieldset class="evidencia">
+					<label>
+						<div class="campo">
+						</div>
+						<span>ARCHIVOS</span>
+					</label>
+					<div class="campo">
+						<input type="file" name="img" multiple>
+					</div>
+				</fieldset>
+				<fieldset class="evidencia">
+					<label>
+						<div class="campo">
+						</div>
+						<span>COMENTARIOS</span>
+					</label>
+					<div class="campo">
+						<textarea></textarea>
+					</div>
+				</fieldset>
+				<button type="submit">
+					<span>ENVIAR</span>
+					<i class="icon-enviar"></i>
+				</button>
+			</form>
+		</section>
+	</main>
+	<footer>
+		<div class="inner">
+			<span><b>NA'AT</b> Todos los derechos reservados 2016</span>
+			<a href="" class="logo"></a>
+			<a href="" class="privacidad">AVISO DE PRIVACIDAD</a>
+		</div>
+	</footer>
+	<!--script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+	<script>
+	 WebFont.load({
+	    google: {
+	      families: ['Maven Pro:400,700']
+	    }
+	  });
+	</script-->
+</body>
+</html>
